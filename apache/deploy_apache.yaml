@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-argocd
+  name: apache-argocd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: apache
   template:
     metadata:
       labels:
-        app: web
+        app: apache
     spec:
       containers:
         - name: web
